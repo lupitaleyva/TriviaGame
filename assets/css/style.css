@@ -1,0 +1,164 @@
+/*header{
+    background-color: black;
+    padding: 50px;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    width: 100%;
+    font-family: sans-serif;
+    padding: 50px;
+    text-align: center;
+}
+
+header ul li{
+ color: white;   
+ width: 100%;
+ font-family: sans-serif;
+ text-align: right;
+ text-decoration: none;
+ margin-left: 20px;
+ margin-right: 20px;
+}
+
+ul{
+    list-style: none;
+    display: inline-flex;
+}
+
+*/
+
+header{
+    padding: 100px;
+    background: black;
+    color: white;
+    width: 100%;
+
+
+}
+ul{
+    text-decoration: none;
+    list-style: none;
+    display:inline-flex;
+    float: right;
+}
+body{
+    background-image: url("../images/mapa2.jpg");
+    background-repeat: round;
+    width: 100%;
+    margin: 0;
+    margin-bottom: 0%;
+}
+
+h1{
+    color: white;
+    text-align: center;
+    font-size: 60px;
+    font-family: sans-serif;
+}
+
+.secondbox{
+    color:white;
+    text-align: center;
+    font-size: 80px;
+    font-family: sans-serif;
+    padding: 50px;
+    border-color: aqua, solid;
+}
+
+
+h2,
+.answers,
+{
+    color: white;
+    text-align: center;
+}
+
+.box{
+    
+
+    background: rgba(212, 201, 139, 0.9);
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    clear: both;
+    text-align: center;
+    font-family: sans-serif;
+    margin-top: 0px;
+    padding: 20px;
+    
+}
+   
+/*.footer{
+        padding: 30px;
+        background-color: black;
+        clear: both;
+        color: white;
+        text-align: center;
+        margin-bottom: 0;
+        font-family: sans-serif;
+        width: 100%;
+        position: fixed;
+
+}
+  */
+
+#startbutton,
+.button{
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 15px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 40px;
+    margin: 4px 2px auto;
+    cursor: pointer;
+    border-radius: 12px;
+   
+}
+
+.done{
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 15px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 40px;
+    margin: 4px 2px auto;
+    cursor: pointer;
+    border-radius: 12px;
+   
+}
+ul,
+li {
+    padding: 20px;
+}
+
+p:hover{
+    transition: duration 0.1;s;
+    padding: 10px;
+    background-color: whitesmoke;
+    width: 40%;
+    margin: 10px auto;
+    position: static;
+}
+
+body,html{
+    height:100%;
+}
+
+.start-button{
+    margin:300px auto;
+    height:100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    margin: 300px;
+    
+}

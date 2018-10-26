@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Trivia
+        </title>
+    </head>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+<header>
+                <h1></h1>
+                <ul>
+                <li id="timeRemaining">Time Remaining</li>
+                <li id="wins">Wins</li>
+                <li id="loses">Loses</li>
+                </ul>
+</header>
+
+<body>
+
+        <div class="text-center start-button">
+
+                
+                <button id="startbutton" class="starting"><strong>START</strong></button>
+          
+              </div>
+          
+
+<div class="box">
+
+    
+      
+        <h2>1. What is the capital of Switzerland?</h2>
+        <p class="correct"><strong>a) Bern</strong></p>
+        <p class="incorrect"><strong>b) Geneve</strong></p>
+        <p class="incorrect"><strong>c) Zurich</strong></p>
+        <p class= "incorrect"><strong>d) Uster</strong></p>
+
+        <h2>2. Where is locate the pink lagoone "Las Coloradas"?</h2>
+        <p class="incorrect"><strong>a) Nayarit</strong></p>
+        <p class="incorrect"><strong>b) Acapulco</strong></p>
+        <p class="correct"><strong>c) Río Lagartos</strong></p>
+        <p class= "incorrect"><strong>d) Puerto Vallarta</strong></p>
+
+        <h2>3. What city is the most populated in the world?</h2>
+        <p class="incorrect"><strong>a) Bangladesh</strong></p>
+        <p class="correct"><strong>b) Tokyo</strong></p>
+        <p class="incorrect"><strong>c) Hong Kong</strong></p>
+        <p class= "incorrect"><strong>d) New York</strong></p>
+
+        <h2>4. What city is the most populated in the world?</h2>
+        <p class="incorrect"><strong>a) Bangladesh</strong></p>
+        <p class="correct"><strong>b) Tokyo</strong></p>
+        <p class="incorrect"><strong>c) Hong Kong</strong></p>
+        <p class= "incorrect"><strong>d) New York</strong></p>
+
+        <h2>5. What is the meassure of the tallest tower in the world "Burj Khalifa"?</h2>
+        <p class="correct"><strong>a) 828 mts</strong></p>
+        <p class="incorrect"><strong>b) 795 mts</strong></p>
+        <p class="incorrect"><strong>c) 938 mts</strong></p>
+        <p class= "incorrect"><strong>d) 899 mts</strong></p>
+
+        <h2>6. In which city is originated The October Fest?</h2>
+        <p class="incorrect"><strong>a) Berlin</strong></p>
+        <p class="incorrect"><strong>b) Paris</strong></p>
+        <p class="incorrect"><strong>c) Hamburg</strong></p>
+        <p class= "correct"><strong>d) Munich</strong></p>
+
+
+
+        <div class="text-center done-button">
+
+                
+                <button id="donebutton" class="done"><strong>DONE</strong></button>
+          
+        </div>
+
+</div>
+   
+<div id="image-div"></div>
+
+    <div>
+      
+    
+
+<footer class ="footer">
+    <h4>Copyright &#169 2018 </h4>
+    <h4>Lupita Leyva</h4>
+</footer>
+
+
+<script type="text/javascript">
+
+    $(document).ready(function()  {
+    
+        $(".box").hide();
+        $("#timeRemaining").hide();
+        $("#wins").hide();
+        $("#loses").hide();
+
+      
+        $("#startbutton").on("click", function() {
+            console.log ("start");
+            $(".start-button").hide();
+            $(".box").show();
+            $("#timeRemaining").show();
+            $("#wins").show();
+            $("#loses").show();
+
+    });
+        var winsCounter = 0;
+        var losesCounter = 0;
+        var timeRemaining = 0;
+
+
+    $(".correct").on("click", function() {
+    console.log(this);
+    winsCounter++;
+    console.log(winsCounter)
+    $("#wins").html("Wins :" + winsCounter);
+    });
+    
+    $(".incorrect").on("click", function() {
+    console.log(this);
+    losesCounter++;
+    console.log(losesCounter);
+    $("#loses").html("Loses :" + losesCounter);
+    
+    });
+
+
+    var number = 30;
+    var intervalId;
+
+    function run() {
+      clearInterval(intervalId);
+      intervalId = setInterval(decrement, 1000);
+    }
+
+    function decrement() {
+      number--;
+
+      $("#timeRemaining").html("Time Temaining: " + number);
+
+      if (number === 0) {
+        stop();
+        alert("Time Up!");
+        $(".start-button").hide();
+        $(".box").hide();
+        $(".done").hide();
+        $("#timeRemaining").show();
+        $("#wins").show();
+        $("#loses").show();
+        
+      }
+    }
+
+    function stop() {
+
+      clearInterval(intervalId);
+    }
+
+    run();
+});   
+
+ $(".done").on("click", function() {
+            console.log ("done");
+            $(".start-button").hide();
+            $(".box").hide();
+
+            $("#timeRemaining").show();
+            $("#wins").show();
+            $("#loses").show();
+
+
+}); 
+
+</script>
